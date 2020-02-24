@@ -12,7 +12,7 @@ export class OperatorsComponent implements OnInit {
     // Mit 'of' den dataSource zu einem Observable machen
     dataSource = of(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
     subscription: any;
-    subscription_2: any;
+    subscription2: any;
 
     // für die Anzeige der Daten im view
     allNumbers: number[] = [];
@@ -30,13 +30,14 @@ export class OperatorsComponent implements OnInit {
             this.allNumbers.push(value);
             console.log(value);
         });
-    // Werte filtern
-    this.subscription_2 = this.dataSource
-        .pipe(filter(value => value % 2 == 0))
-        .subscribe(value => {
-            this.evenNumbers.push(value);
-            console.log(value);
-        });
+     // Werte filtern
+
+     this.subscription2 = this.dataSource
+          .pipe(filter(value => value % 2 == 0))
+          .subscribe(value => {
+              this.evenNumbers.push(value);
+              console.log(value);
+          });
   }
 
 }
