@@ -5,12 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { RxjsComponent } from './rxjs/rxjs.component';
 import { OperatorsComponent } from './operators/operators.component';
+import { PipesComponent } from './pipes/pipes.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     RxjsComponent,
-    OperatorsComponent
+    OperatorsComponent,
+    PipesComponent
   ],
   imports: [
     BrowserModule,
